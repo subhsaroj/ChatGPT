@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "IjBDqLJJkDNtQm+6j84P+nay+mKSBupSidmh/D1N+Uc=",
+  "Source": "ChatGptProxyApi",
+  "BasePath": "_content/ChatGptProxyApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

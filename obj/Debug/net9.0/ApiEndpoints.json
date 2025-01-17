@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "ChatGptProxyApi.Controllers.ChatController",
+    "Method": "Post",
+    "RelativePath": "Chat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ChatGptProxyApi.Models.ChatRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

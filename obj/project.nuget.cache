@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "WoleIUf+BIw=",
+  "success": true,
+  "projectFilePath": "C:\\Saurabh\\Projects\\.Net Projects\\ChatGptProxyApi\\ChatGPT\\ChatGptProxyApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Saurabh\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.1\\microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
+    "C:\\Users\\Saurabh\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
