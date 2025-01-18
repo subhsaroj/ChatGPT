@@ -1,11 +1,18 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the DI container.
-builder.Services.AddControllers();
-builder.Services.AddHttpClient("OpenAI", client =>
+// Add services to the container.
+builder.Services.AddEndpointsApiExplorer(); // Necessary for Swagger/OpenAPI endpoint exploration
+builder.Services.AddSwaggerGen(c =>
 {
-    client.BaseAddress = new Uri("https://api.openai.com/v4/");
-    client.DefaultRequestHeaders.Add("Authorization", "Bearer YOUR_API_KEY");
+  c.SwaggerDoc("v1", new OpenApiInfo { Title = "ChatGptProxyApi", Version = "v4" });
 });
 
 var app = builder.Build();
@@ -13,7 +20,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseDeveloperExceptionPage();
+  app.UseSwagger();
+  app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ChatGptProxyApi v1"));
 }
 
 app.UseHttpsRedirection();
@@ -21,3 +29,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
